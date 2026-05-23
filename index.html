@@ -392,7 +392,7 @@
 
 <script>
 // ====== CONFIG ======
-const API_BASE = 'https://viralxbackend.onrender.com'; // Change to your backend URL
+const API_BASE = 'http://viralxbackend.onrender.com'; // Change to your backend URL
 let allPosts = { most_popular: [], today_new: [], trending_now: [] };
 
 // ====== TELEGRAM INIT ======
@@ -482,10 +482,12 @@ function renderAll(data) {
   document.getElementById('main-content').innerHTML = html;
 }
 
-function getThumbUrl(filename) {
-  if (!filename) return '';
-  if (filename.startsWith('http')) return filename;
-  return `${API_BASE}/uploads/${filename}`;
+function getThumbUrl(thumbnail) {
+  if (!thumbnail) return '';
+  // Cloudinary URL already full https URL — use directly
+  if (thumbnail.startsWith('http')) return thumbnail;
+  // Fallback for old local uploads (if any)
+  return `${API_BASE}/uploads/${thumbnail}`;
 }
 
 function getBadges(post) {
