@@ -31,51 +31,7 @@
     padding-bottom: 80px;
   }
 
-  /* TOP NAV */
-  .top-nav {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .nav-close {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    color: #666;
-  }
-  .nav-title {
-    flex: 1;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 700;
-    color: #1a1a1a;
-    letter-spacing: 0.3px;
-  }
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .nav-btn {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 18px;
-    cursor: pointer;
-  }
+
 
   /* SECTION HEADER */
   .section-header {
@@ -389,16 +345,6 @@
 </head>
 <body>
 
-<!-- TOP NAV -->
-<div class="top-nav">
-  <div class="nav-close" onclick="window.Telegram?.WebApp?.close()">✕</div>
-  <div class="nav-title">Bd Viral Video X</div>
-  <div class="nav-actions">
-    <div class="nav-btn" onclick="openSearch()">🔍</div>
-    <div class="nav-btn">⋮</div>
-  </div>
-</div>
-
 <!-- MAIN CONTENT -->
 <div id="main-content">
   <div class="loading-wrap">
@@ -615,4 +561,4 @@ function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 loadAllPosts();
 </script>
 </body>
-  </html>
+</html>
